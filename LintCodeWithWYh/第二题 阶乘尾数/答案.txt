@@ -1,0 +1,22 @@
+package com.bangtang;
+
+public class AplusB {
+	public static void main(String[] args) {
+		//System.out.println(add(101,20));
+		System.out.println(trailingZeros(11));
+	}
+	
+	public static long trailingZeros(long n) {
+        // write your code here, try to do it without arithmetic operators.
+        int sum = 1;
+        for(int i =1;i<=n;i++){
+            sum*=i;
+        }
+        int num = 0;
+        while(sum%10 == 0){
+            num++;
+            sum = sum/10;
+        }
+        return num;
+    }
+}

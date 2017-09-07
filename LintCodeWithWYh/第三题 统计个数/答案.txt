@@ -1,0 +1,12 @@
+ public int digitCounts(int k, int n) {
+        String str = "";
+        for(int i = 0;i<=n;i++){
+            str+=i;
+        }
+        int num = 0;
+        int index = -1;
+        while((index = str.indexOf(k+"",index+1))!=-1){
+            num++;
+        }
+        return num;
+    }
